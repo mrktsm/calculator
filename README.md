@@ -1,9 +1,10 @@
 # Calculator
 
+A simple JavaFX-based calculator developed for CS216 at Gettysburg College. Supports basic arithmetic operations, exponentiation, and a modern, styled UI.
+
 ![Untitled design (9)](https://github.com/user-attachments/assets/4feadd11-d164-4a86-b3a8-fb1132c4ef36)
 
 
-A simple JavaFX-based calculator developed for CS216 at Gettysburg College. Supports basic arithmetic operations, exponentiation, and a modern, styled UI.
 
 ## Features
 - Basic arithmetic operations: addition, subtraction, multiplication, and division
