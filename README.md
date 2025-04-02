@@ -3,49 +3,51 @@
 ![Untitled design (9)](https://github.com/user-attachments/assets/4feadd11-d164-4a86-b3a8-fb1132c4ef36)
 
 
-## Overview
-This is a simple yet functional calculator application built using JavaFX for **CS216 at Gettysburg College**. The application features a user-friendly interface, styled buttons, and a robust expression evaluation mechanism using stacks for operand and operator management.
+A simple JavaFX-based calculator developed for CS216 at Gettysburg College. Supports basic arithmetic operations, exponentiation, and a modern, styled UI.
 
 ## Features
-- **Basic Arithmetic Operations**: Addition, Subtraction, Multiplication, and Division.
-- **Exponentiation**: Includes a power function (`xʸ`).
-- **Parentheses Support**: Allows grouping of expressions.
-- **Clear Function**: Resets the screen and internal stacks.
-- **Custom Styling**: Dark-themed UI with interactive button effects.
+- Basic arithmetic operations: addition, subtraction, multiplication, and division
+- Exponentiation (power function)
+- Parentheses support for operation precedence
+- Dark-themed UI with gradient-styled buttons
+- Responsive and user-friendly interface
 
-## Installation and Running
-### Prerequisites
-- Java Development Kit (JDK) 8 or higher
-- JavaFX SDK (if using JDK 8)
+## Requirements
+- Java 8 or later
+- JavaFX installed
 
-### Steps
-1. Clone or download this repository.
-2. Compile and run the application using:
+## Usage
+1. Clone this repository:
    ```sh
-   javac *.java
+   git clone https://github.com/yourusername/calculator-javafx.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd calculator-javafx
+   ```
+3. Compile and run the application:
+   ```sh
+   javac Calculator.java
    java Calculator
    ```
 
-## How It Works
-- The calculator maintains two stacks:
-  - **Operand Stack**: Stores numerical values.
-  - **Operator Stack**: Stores operators with their precedence.
-- When an operator is encountered, the application evaluates expressions based on precedence and updates the stacks accordingly.
-- The display updates dynamically as buttons are pressed.
-
-## UI Components
-- **Screen**: Displays user input and results.
-- **Keypad**: Grid of buttons for numbers, operations, and control actions.
-- **Styled Buttons**: Different colors for numeric keys, operators, and special functions.
-
-## Future Enhancements
-- Implement support for more advanced functions (e.g., square root, logarithm).
-- Improve error handling for invalid expressions.
-- Add keyboard input support.
-
-## Author
-Marko Tsymbaliuk
-
 ## License
-This project is for educational purposes as part of **CS216 at Gettysburg College**.
+
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for details.
+
+```
+   Copyright 2024
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
 
