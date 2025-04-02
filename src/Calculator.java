@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 public class Calculator extends Application {
@@ -57,14 +58,18 @@ public class Calculator extends Application {
         gui.setCenter(keypad);
         
 
-
+        primaryStage.initStyle(StageStyle.UTILITY);
+        
         // set up the scene
         Scene scene = new Scene(gui); 
         primaryStage.setTitle("Calculator");
         primaryStage.setScene(scene);
         
-        primaryStage.setResizable(false);
+
+
         
+        primaryStage.setResizable(false);
+
         primaryStage.show();
     }
     
@@ -96,11 +101,11 @@ public class Calculator extends Application {
         keypad.setAlignment(Pos.CENTER);
         
         
-        buttonTexts = new String[][]{{"(", ")", "C", "^"},
+        buttonTexts = new String[][]{{"(", ")", "C", "xʸ"},
 		  	 						 {"1", "2", "3", "+"},
 		  	 						 {"4", "5", "6", "-"},
-		  	 						 {"7", "8", "9", "*"},
-		  	 						 {".", "0", "=", "/"}};
+		  	 						 {"7", "8", "9", "×"},
+		  	 						 {".", "0", "=", "÷"}};
         
         for (int r = 0; r < buttonTexts.length; r++) {
         	for (int c = 0; c < buttonTexts[0].length; c++) {
@@ -125,7 +130,7 @@ public class Calculator extends Application {
     	   
     	   String buttonText = source.getText();
     	   
-    	   screen.appendText(buttonText);
+    	   screen.appendText(buttonText == "xʸ" ? "^" : buttonText);
     	   
     	   switch(buttonText) {
     	   		case "1": case "2": case "3": case "4": case "5": case "6": case "7": case "8": case "9": case "0": case ".":
@@ -140,15 +145,15 @@ public class Calculator extends Application {
     	   			MinusOperator minusOperator = new MinusOperator();
     	   			handleOperator(minusOperator);
     	   			break;
-    	   		case "*":
+    	   		case "×":
     	   			MulOperator mulOperator = new MulOperator();
     	   			handleOperator(mulOperator);
     	   			break;
-    	   		case "/":
+    	   		case "÷":
     	   			DivOperator divOperator = new DivOperator();
     	   			handleOperator(divOperator);
     	   			break;
-    	   		case "^":
+    	   		case "xʸ":
     	   			PowerOperator powerOperator = new PowerOperator();
     	   			handleOperator(powerOperator);
     	   			break;	
@@ -243,7 +248,7 @@ public class Calculator extends Application {
                     break;
 
                 // Orange gradient for operators and equals
-                case "+": case "-": case "*": case "/": case "=": case "^":
+                case "+": case "-": case "×": case "÷": case "=": case "xʸ":
                     buttonSpecificStyle = "-fx-background-color: linear-gradient(to bottom, #ff8c00, #e07b00);"; // Orange gradient
                     hoverStyle = "-fx-background-color: linear-gradient(to bottom, #ff7f00, #d06500);"; // Lighter orange
                     pressedStyle = "-fx-background-color: linear-gradient(to bottom, #e06f00, #b75c00);"; // Darker orange
